@@ -1,0 +1,33 @@
+{
+  "name": "laas",
+  "version": "1.0.0",
+  "description": "LaTeX as a Service",
+  "repository": "https://github.com/jozsefsallai/laas",
+  "author": "@jozsefsallai",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@mdx-js/loader": "^1.6.11",
+    "@next/mdx": "^9.4.4",
+    "mathjax-full": "^3.0.5",
+    "next": "^9.4.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "sass": "^1.26.10",
+    "sharp": "^0.25.4"
+  },
+  "devDependencies": {
+    "@types/mathjax": "^0.0.36",
+    "@types/node": "^14.0.23",
+    "@types/react": "^16.9.43",
+    "@types/sharp": "^0.25.0",
+    "tslint": "^6.1.2",
+    "typescript": "^3.9.7"
+  },
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev",
+    "lint": "tslint --project .",
+    "start": "next start"
+  }
+}

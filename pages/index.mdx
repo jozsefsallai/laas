@@ -1,0 +1,41 @@
+import Example from '../components/Example';
+
+# LaaS - LaTeX as a Service
+
+**LaaS** is an online API that allows you to parse LaTeX expressions and return
+them as either SVG or PNG. It can be useful in places where you want to generate
+LaTeX output as an image without too much overhead.
+
+The app uses [MathJax][1] to parse the provided inputs.
+
+## Live Example
+
+<Example />
+
+## Endpoints
+
+```
+POST/GET https://laas.vercel.app/api/svg
+```
+
+Returns an SVG representation of the given LaTeX input. You must pass the input
+as plaintext body (POST) **or** an encoded string in the `input` query parameter
+(GET).
+
+```
+POST/GET https://laas.vercel.app/api/png
+```
+
+Returns a PNG of the given LaTeX input. You must pass the input as plaintext
+body (POST) **or** an encoded string in the `input` query parameter (GET).
+
+**URL Parameters:**
+
+- `width=1200` - the max width of the generated image (default: 1200, max: 5000)
+- `height=400` - the max height of the generated image (default: 400, max: 5000)
+- `white=false` - render white text instead of black text (default: false)
+- `disable_transparency=false` - when set to true, the background of the
+image will not be transparent (if dark=false it will be white, otherwise it
+will be black)
+
+[1]: https://www.mathjax.org/
